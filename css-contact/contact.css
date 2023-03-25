@@ -1,0 +1,130 @@
+body main .main-visual {
+  padding: 95px 0;
+  background: url(../img/plan.png) no-repeat center center/cover;
+}
+body main .main-visual .ttl {
+  color: #FFFFFF;
+}
+body main .form-wrapper {
+  box-sizing: border-box;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 58px 20px 82px 20px;
+  font-size: 16px;
+  font-weight: normal;
+}
+body main .form-wrapper > p {
+  margin-bottom: 45px;
+  line-height: 1.7;
+}
+body main .form-wrapper form input, body main .form-wrapper form textarea, body main .form-wrapper form button {
+  box-sizing: border-box;
+  border-radius: 0;
+  border: 0.5px solid #1B224C;
+}
+body main .form-wrapper form input[type=text], body main .form-wrapper form input[type=email],
+body main .form-wrapper form input[type=tel], body main .form-wrapper form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+body main .form-wrapper form input[type=text]::-moz-placeholder, body main .form-wrapper form input[type=email]::-moz-placeholder, body main .form-wrapper form input[type=tel]::-moz-placeholder, body main .form-wrapper form textarea::-moz-placeholder {
+  font-size: 12px;
+  color: #B4B4B4;
+}
+body main .form-wrapper form input[type=text]:-ms-input-placeholder, body main .form-wrapper form input[type=email]:-ms-input-placeholder, body main .form-wrapper form input[type=tel]:-ms-input-placeholder, body main .form-wrapper form textarea:-ms-input-placeholder {
+  font-size: 12px;
+  color: #B4B4B4;
+}
+body main .form-wrapper form input[type=text]::placeholder, body main .form-wrapper form input[type=email]::placeholder,
+body main .form-wrapper form input[type=tel]::placeholder, body main .form-wrapper form textarea::placeholder {
+  font-size: 12px;
+  color: #B4B4B4;
+}
+body main .form-wrapper form input[type=text], body main .form-wrapper form input[type=email],
+body main .form-wrapper form input[type=tel] {
+  height: 50px;
+  padding-left: 20px;
+}
+body main .form-wrapper form input[type=text], body main .form-wrapper form input[type=email] {
+  margin-bottom: 20px;
+}
+body main .form-wrapper form input[type=tel] {
+  margin-bottom: 24px;
+}
+body main .form-wrapper form textarea {
+  margin-bottom: 31px;
+  padding: 22px 23px;
+  resize: none;
+  height: 240px;
+}
+body main .form-wrapper form p:nth-of-type(1), body main .form-wrapper form .check-box {
+  text-align: center;
+}
+body main .form-wrapper form h4 {
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+body main .form-wrapper form h4:nth-of-type(5) {
+  margin-bottom: 19px;
+}
+body main .form-wrapper form h4:nth-of-type(5) span {
+  font-weight: bold;
+}
+body main .form-wrapper form .wpcf7-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main .form-wrapper form .wpcf7-radio .wpcf7-list-item {
+  margin: 0;
+}
+body main .form-wrapper form .wpcf7-radio .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+}
+body main .form-wrapper form .wpcf7-radio .wpcf7-list-item label input {
+  margin: 0;
+  margin-right: 19px;
+  height: 20px;
+  width: 20px;
+}
+body main .form-wrapper form .wpcf7-radio .wpcf7-list-item + .wpcf7-list-item {
+  margin-top: 12px;
+}
+body main .form-wrapper form .wpcf7-radio .wpcf7-list-item:nth-of-type(4) {
+  margin-bottom: 24px;
+}
+body main .form-wrapper form .privacy-txt {
+  text-align: center;
+  margin-bottom: 33px;
+}
+body main .form-wrapper form .privacy-txt a {
+  display: inline;
+  font-size: 16px;
+  color: #F5A623;
+  text-decoration: underline;
+}
+body main .form-wrapper form .wpcf7-checkbox .first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 46px;
+}
+body main .form-wrapper form .wpcf7-checkbox .first input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 15px;
+}
+body main .form-wrapper form .button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #1B224C;
+}/*# sourceMappingURL=contact.css.map */

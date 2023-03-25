@@ -1,0 +1,234 @@
+@charset "UTF-8";
+html {
+  margin-top: 0 !important;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  line-height: 1.7;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  color: #1B224C;
+}
+body main {
+  margin-top: 64px; /*WordPressの機能により空いてしまう余白の調整(元は80px)*/
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  max-width: 940px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.ttl {
+  text-align: center;
+  color: #1B224C;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.business-hours {
+  text-align: right;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.tel p {
+  font-size: 16px;
+}
+
+.round-btn {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F5A623;
+  font-size: 16px;
+}
+
+.contact-link {
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.blog-ttl, .blog-txt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.news-ttl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blue-category {
+  background-color: #1B224C;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.blog-content, .news-content {
+  display: flex;
+}
+.blog-content .blog-detail, .news-content .blog-detail {
+  position: relative;
+}
+.blog-content .blog-detail h4, .blog-content .blog-detail p, .news-content .blog-detail h4, .news-content .blog-detail p {
+  color: #1B224C;
+}
+.blog-content .blog-detail h4, .news-content .blog-detail h4 {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  line-height: 1.7;
+}
+.blog-content .blog-detail p, .news-content .blog-detail p {
+  font-weight: normal;
+}
+
+.blog-img-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+.blog-img-wrapper .blue-category, .blog-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blog-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bread-crumbs {
+  background-color: #F8F8F8;
+  padding: 19px 0;
+}
+.bread-crumbs .wrapper {
+  height: 100%;
+}
+.bread-crumbs .wrapper .breadcrumb-container {
+  height: 100%;
+}
+.bread-crumbs .wrapper ol {
+  height: 100%;
+}
+.bread-crumbs .wrapper ol li {
+  font-weight: normal;
+  display: inline;
+  font-size: 12px;
+}
+.bread-crumbs .wrapper ol li a {
+  display: inline;
+  color: #1B224C;
+  padding: 0;
+  margin: 0;
+}
+.bread-crumbs .wrapper ol li:not(:last-child) a {
+  text-decoration: underline;
+}
+.bread-crumbs .wrapper ol li:last-child .separator {
+  display: none;
+}
+.bread-crumbs .wrapper ol li .separator {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.navigation {
+  justify-content: center;
+}
+.navigation ul {
+  display: flex;
+}
+.navigation ul li {
+  margin: 0 9.5px;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #1B224C;
+}
+.navigation ul li:has(.current) {
+  background-color: #1B224C;
+}
+.navigation ul li:has(.current) .current {
+  display: block;
+  color: #FFFFFF;
+}
+.navigation ul li:has(.prev), .navigation ul li:has(.next) {
+  display: none;
+}
+.navigation ul li:has(.prev) .prev, .navigation ul li:has(.prev) .next, .navigation ul li:has(.next) .prev, .navigation ul li:has(.next) .next {
+  display: none;
+}
+.navigation ul li .current, .navigation ul li a {
+  text-align: center;
+  line-height: 50px;
+}
+.navigation ul li a {
+  color: #1B224C;
+}
+
+.tab-only {
+  display: none;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  body .tab-only {
+    display: none;
+  }
+}
+@media (max-width: 960px) and (min-width: 521px) {
+  body .tab-only {
+    display: block;
+  }
+  body main .ttl {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 790px) {
+  body .tab-only {
+    display: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  body .sp-only {
+    display: block;
+  }
+  body .pc-only {
+    display: none;
+  }
+  body main {
+    margin-top: 44px; /*WordPressの機能により空いてしまう余白の調整(元は60px)*/
+  }
+  body main .ttl {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,133 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+body {
+    main {
+        .main-visual {
+            padding: 95px 0;
+            background:  url(../img/plan.png) no-repeat center center / cover; 
+            .ttl {
+                color: $bg;
+            }
+        }
+
+        .form-wrapper {
+            box-sizing: border-box;
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 58px 20px 82px 20px;
+            font-size: $md;
+            font-weight: normal;
+            & > p {
+                margin-bottom: 45px;
+                line-height: 1.7;
+            }
+            form {
+                input, textarea, button {
+                    box-sizing: border-box;
+                    border-radius: 0;
+                    border: 0.5px solid $color;
+                }
+                input[type="text"], input[type="email"],
+                input[type="tel"],textarea {
+                    width: 100%;
+                    box-sizing: border-box;
+                    &::placeholder {
+                        font-size: $x-sm;
+                        color: $placeholder;
+                    }
+                }
+                input[type="text"], input[type="email"],
+                input[type="tel"] {
+                    height: 50px;
+                    padding-left: 20px;
+                }
+                input[type="text"], input[type="email"] {
+                    margin-bottom: 20px;
+                }
+                input[type="tel"] {
+                    margin-bottom: 24px;
+                }
+                textarea {
+                    margin-bottom: 31px;
+                    padding: 22px 23px;
+                    resize: none;
+                    height: 240px;
+                }
+                p:nth-of-type(1), .check-box {
+                    text-align: center;
+                }
+                h4 {
+                    font-weight: normal;
+                    margin-bottom: 12px;
+                    &:nth-of-type(5) {
+                        margin-bottom: 19px;
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .wpcf7-radio {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .wpcf7-list-item {
+                        margin: 0;
+                        label {
+                            display: flex;
+                            align-items: center;
+                            input {
+                                margin: 0;
+                                margin-right: 19px;
+                                height: 20px;
+                                width: 20px;
+                            }
+                        }
+                        & + .wpcf7-list-item {
+                            margin-top: 12px;
+                        }
+                        &:nth-of-type(4) {
+                            margin-bottom: 24px;
+                        }
+                    }
+                }
+                .privacy-txt {
+                    text-align: center;
+                    margin-bottom: 33px;
+                    a {
+                        display: inline;
+                        font-size: $md;
+                        color: $btn-bg;
+                        text-decoration: underline;
+                    }
+                }
+                .wpcf7-checkbox {
+                    .first {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 46px;
+                        input {
+                            width: 20px;
+                            height: 20px;
+                            margin: 0;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                .button {
+                    display: block;
+                    width: 200px;
+                    height: 50px;
+                    line-height: 50px;
+                    border-radius: 5px;
+                    margin: 0 auto;
+                    padding: 0;
+                    font-weight: bold;
+                    color: $bg;
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}

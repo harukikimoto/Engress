@@ -1,0 +1,21 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+
+body {
+    main {
+        .bread-crumbs {
+            margin-bottom: 83px;
+            & + p {
+                margin-bottom: 85px;
+                text-align: center;
+                line-height: 1.68;
+                font-weight: normal;
+            }
+        }
+        .contact-link {
+            margin-bottom: 81px;
+            color: $color;
+        }
+    }
+}

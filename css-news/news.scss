@@ -1,0 +1,92 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+
+body {
+    main {
+        .main-visual {
+            padding: 95px 0;
+            background:  url(../img/news.png) no-repeat center center / cover; 
+            .ttl {
+                color: $bg;
+            }
+        }
+
+        .news-archive {
+            padding: 58px 0 46px;
+            .wrapper {
+                    
+                .ttl {
+                    margin-bottom: 45px;
+                }
+                .news-content {
+                    &:last-of-type {
+                        margin-bottom: 68px;
+                        border-bottom: 1px solid $news-archive-line;
+                    }
+                    a {
+                        text-decoration-color: $color;
+                        color: $color;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 64.5px;
+                        display: flex;
+                        border-top: 1px solid $news-archive-line;
+                        p, .news-ttl {
+                            font-size: $md;
+                            font-weight: normal;
+                            line-height: 64.5px;
+                        }
+                        p {
+                            margin-right: 51px;
+                            white-space:nowrap;
+                        }
+                        .news-ttl {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@include sm-tab {
+    body {
+        main {
+            .news-archive {
+                .wrapper {
+                    .news-content {
+                        a {
+                            p {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include sp {
+    body {
+        main {
+            .news-archive {
+                .wrapper {
+                    .news-content {
+                        a {
+                            p {
+                                margin-right: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

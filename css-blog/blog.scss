@@ -1,0 +1,135 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+
+body {
+    main {
+        .main-visual {
+            padding: 95px 0;
+            background:  url(../img/blog.png) no-repeat center center / cover; 
+            .ttl {
+                color: $bg;
+            }
+        }
+
+        .blog-archive {
+            padding: 58px 0 45px;
+            .wrapper {
+                .ttl {
+                    margin-bottom: 60px;
+                }
+                .blog-content {
+                    width: 100%;
+                    & + .blog-content {
+                        margin-top: 61px;
+                    }
+                    &:nth-of-type(2) {
+                        margin-top: 93px;
+                    }
+                    &:nth-of-type(10) {
+                        margin-bottom: 109px;
+                    }
+                    .blog-img-wrapper {
+                        width: 240px;
+                        aspect-ratio: 240 / 148;
+                        margin-right: 50px;
+                        .blue-category {
+                            padding: 8px 13px;
+                        }
+                    }
+                    .blog-detail {
+                        .blog-ttl {
+                            margin-bottom: 28px;
+                            font-size: $little-lg-a;
+                            text-decoration: underline;
+                            text-decoration-color: $color;
+                            text-decoration-thickness: 1px;
+                            line-height: 1.5;
+                            a {
+                                color: $color;
+                            }
+                        }
+                        p {
+                            &:nth-of-type(1) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .blog-txt {
+                            font-weight: normal;
+                            font-size: $md;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@include sm-tab {
+    body {
+        main {
+            .blog-archive {
+                .wrapper {
+                    .blog-content {
+                        .blog-img-wrapper {
+                            margin-right: 35px;
+                            width: 220px;
+                        }
+                        .blog-detail {
+                            p {
+                                &:nth-of-type(1) {
+                                    margin-bottom: 15px;
+                                }
+                            }
+                            .blog-ttl {
+                                margin-bottom: 20px;
+                                -webkit-line-clamp: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include sp {
+    body {
+        main {
+            .blog-archive {
+                .wrapper {
+                    .blog-content {
+                        & + .blog-content {
+                            margin-top: 45px;
+                        }
+                        &:nth-of-type(2) {
+                            margin-top: 70px;
+                        }
+                        &:nth-of-type(10) {
+                            margin-bottom: 80px;
+                        }
+                        .blog-img-wrapper {
+                            margin-right: 25px;
+                            width: 175px;
+                        }
+                        .blog-detail {
+                            p {
+                                &:nth-of-type(1) {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            .blog-ttl {
+                                margin-bottom: 15px;
+                                -webkit-line-clamp: 1;
+                                font-size: $little-lg-c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

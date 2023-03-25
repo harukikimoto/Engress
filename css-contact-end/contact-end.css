@@ -1,0 +1,13 @@
+body main .bread-crumbs {
+  margin-bottom: 83px;
+}
+body main .bread-crumbs + p {
+  margin-bottom: 85px;
+  text-align: center;
+  line-height: 1.68;
+  font-weight: normal;
+}
+body main .contact-link {
+  margin-bottom: 81px;
+  color: #1B224C;
+}/*# sourceMappingURL=contact-end.css.map */

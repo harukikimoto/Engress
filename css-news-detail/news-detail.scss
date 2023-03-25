@@ -1,0 +1,21 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+
+body {
+    main {
+        & > .wrapper {
+            padding: 60px 0;
+            h3 {
+                margin-bottom: 45px;
+                font-size: $sp-ttl-lg;
+            }
+            p {
+                text-align: right;
+                margin-bottom: 60px;
+                font-size: $md;
+                font-weight: normal;
+            }
+        }
+    }
+}

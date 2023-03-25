@@ -1,0 +1,201 @@
+@charset "UTF-8";
+.navigation, .contact-btn, .tel {
+  display: flex;
+}
+
+header, .navigation, .tel {
+  align-items: center;
+}
+
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #FFFFFF;
+}
+body header .navigation .logo {
+  width: 136px;
+  height: 27px;
+}
+body header .navigation .logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body header .navigation nav {
+  display: flex;
+}
+body header .navigation nav li {
+  margin-left: 28px;
+  font-size: 16px;
+}
+body header .navigation nav li a {
+  color: #1B224C;
+}
+body header .contact-btn {
+  align-items: flex-end;
+}
+body header .contact-btn .contact-btn-inner .tel {
+  margin-top: 10px;
+}
+body header .contact-btn .contact-btn-inner .tel img {
+  width: 10px;
+  height: 15px;
+}
+body header .contact-btn .contact-btn-inner .tel p {
+  margin-left: 5px;
+  font-size: 16px;
+}
+body header .contact-btn .btn {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+}
+body header .contact-btn .btn a {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+body header .contact-btn div:nth-of-type(2) {
+  width: 142px;
+  margin-left: 23px;
+  background-color: #F5A623;
+}
+body header .contact-btn div:nth-of-type(3) {
+  width: 137px;
+  margin-left: 10px;
+  background-color: #1B224C;
+}
+body header .nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  body header .navigation nav {
+    z-index: 200;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: absolute;
+    right: -300px;
+    width: 300px;
+    padding: 50px;
+    background-color: #1B224C;
+    transition: right 0.3s;
+  }
+  body header .navigation nav.open {
+    right: 0;
+  }
+  body header .navigation nav li {
+    display: block;
+    text-align: center;
+  }
+  body header .navigation nav li + li {
+    margin-top: 50px;
+  }
+  body header .navigation nav li:nth-of-type(1) a {
+    color: #C3C3C3;
+  }
+  body header .navigation nav li a {
+    color: #FFFFFF;
+    font-size: 28px;
+  }
+  body header .contact-btn-wrapper {
+    display: flex;
+  }
+  body header .contact-btn-wrapper .contact-btn .btn {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+  }
+  body header .contact-btn-wrapper .contact-btn div:nth-of-type(2) {
+    width: 100px;
+    margin-left: 12px;
+  }
+  body header .contact-btn-wrapper .contact-btn div:nth-of-type(3) {
+    width: 100px;
+  }
+  body header .contact-btn-wrapper .nav-toggle {
+    position: relative;
+    margin: auto 0;
+    height: 20px;
+    width: 30px;
+    margin-left: 14px;
+    display: block;
+    cursor: pointer;
+    /*三本線*/
+    /*三本線*/
+    /*バツ*/
+    /*バツ*/
+  }
+  body header .contact-btn-wrapper .nav-toggle span {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 30px;
+    background-color: #1B224C;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  body header .contact-btn-wrapper .nav-toggle span:nth-of-type(1) {
+    top: 0;
+  }
+  body header .contact-btn-wrapper .nav-toggle span:nth-of-type(2) {
+    top: 10px;
+    background-color: #FFFFFF;
+  }
+  body header .contact-btn-wrapper .nav-toggle span:nth-of-type(3) {
+    top: 12px;
+    width: 15px;
+  }
+  body header .contact-btn-wrapper .nav-toggle.open {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  body header .contact-btn-wrapper .nav-toggle.open span:nth-of-type(1), body header .contact-btn-wrapper .nav-toggle.open span:nth-of-type(3) {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    background: #1B224C;
+  }
+  body header .contact-btn-wrapper .nav-toggle.open span:nth-of-type(1) {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  body header .contact-btn-wrapper .nav-toggle.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  body header .contact-btn-wrapper .nav-toggle.open span:nth-of-type(3) {
+    width: 30px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+@media (max-width: 960px) and (min-width: 521px) {
+  body header .navigation nav {
+    top: 80px;
+    height: calc(100vh - 80px);
+  }
+}
+@media screen and (max-width: 520px) {
+  body header {
+    height: 60px;
+  }
+  body header .navigation nav {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+  body header .contact-btn-wrapper .contact-btn .contact-btn-inner {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

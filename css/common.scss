@@ -1,0 +1,241 @@
+@use '../mixin/mixin' as *; 
+@use '../variables/variables' as *;
+
+html {
+    margin-top: 0!important;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    position: relative;
+    font-family: $font-family;
+    line-height: 1.7;
+    font-weight: bold;
+    background-color: $bg;
+    color: $color;
+    main {
+        margin-top: 64px;/*WordPressの機能により空いてしまう余白の調整(元は80px)*/
+    }
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: $bg;
+}
+li {
+    list-style: none;
+}
+.wrapper {
+    box-sizing: border-box;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.ttl {
+    text-align: center;
+    color: $color;
+    font-size: $x-lg;
+    line-height: 1;
+}
+.business-hours {
+    text-align: right;
+    font-size: $x-sm;
+    font-weight: normal;
+}
+.tel {
+    p {
+        font-size: $md;
+    }
+}
+.round-btn {
+    margin: 0 auto;
+    text-align: center;
+    background-color: $btn-bg;
+    font-size: $md;
+}
+.contact-link {
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.blog-ttl, .blog-txt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.news-ttl {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.blue-category {
+    background-color: $color;
+    text-align: center;
+    color: $bg;
+    font-size: $x-sm;
+    font-weight: normal;
+}
+
+.blog-content, .news-content {
+    display: flex;
+    .blog-detail {
+        position: relative;
+        h4, p {
+            color: $color;
+        }
+        h4 {
+            text-decoration-line: underline;
+            line-height: 1.7;
+        }
+        p {
+            font-weight: normal;
+        }
+    }
+}
+
+.blog-img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    .blue-category, img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.bread-crumbs {
+    background-color: $flow-content-bg;
+    padding: 19px 0;
+    .wrapper {
+        height: 100%;
+        .breadcrumb-container {
+            height: 100%;
+        }
+        ol {
+            height: 100%;
+            li {
+                font-weight: normal;
+                display: inline;
+                font-size: $x-sm;
+                a {
+                    display: inline;
+                    color: $color;
+                    padding: 0;
+                    margin: 0;
+                    
+                }
+                &:not(:last-child) {
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+                &:last-child {
+                    .separator {
+                        display: none;
+                    }
+                }
+                .separator {
+                    display: inline-block;
+                    margin: 0 6px;
+                }
+            }
+        }
+    }
+}
+.navigation {
+    justify-content: center;
+    ul {
+        display: flex;
+        li {
+            margin: 0 9.5px;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid $color;
+            &:has(.current) {
+                background-color: $color;
+                .current {
+                    display: block;
+                    color: $bg;
+                }
+            }
+            &:has(.prev), &:has(.next) {
+                display: none;
+                .prev, .next {
+                    display: none;
+                }
+            }
+            .current, a {
+                text-align: center;
+                line-height: 50px;
+            }
+            a {
+                color: $color;
+            }
+        }
+    }
+}
+.tab-only {
+    display: none;
+}
+.sp-only {
+    display: none;
+}
+
+@include tab-and-sp {
+    body {
+        .tab-only {
+            display: none;
+        }
+    }
+}
+
+@include tab {
+    body {
+        .tab-only {
+            display: block;
+        }
+        main {
+            .ttl {
+                font-size: $lg;
+            }
+        }
+    }
+}
+
+@include sm-tab {
+    body {
+        .tab-only {
+            display: none;
+        }
+    }
+}
+
+@include sp {
+    body {
+        .sp-only {
+            display: block;
+        }
+        .pc-only {
+            display: none;
+        }
+        main {
+            margin-top: 44px;/*WordPressの機能により空いてしまう余白の調整(元は60px)*/
+            .ttl {
+                font-size: $sp-ttl-lg;
+            }
+        }
+    }
+}

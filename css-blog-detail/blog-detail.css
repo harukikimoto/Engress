@@ -1,0 +1,180 @@
+body main {
+  /* wrapper
+  ====================================================*/
+}
+body main > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 20px 69px;
+  /* article-wrapper
+  ====================================================*/
+  /* sidebar
+  ====================================================*/
+}
+body main > .wrapper .article-wrapper {
+  width: 65.5556%;
+  /* article
+  ====================================================*/
+  /* blog
+  ====================================================*/
+}
+body main > .wrapper .article-wrapper article {
+  margin-bottom: 60px;
+}
+body main > .wrapper .article-wrapper article .blue-category {
+  display: inline-block;
+  margin-bottom: 32px;
+  padding: 10px 25px;
+}
+body main > .wrapper .article-wrapper article h3 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+body main > .wrapper .article-wrapper article .time-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+body main > .wrapper .article-wrapper article .time-wrapper .wp_social_bookmarking_light {
+  padding: 0 !important;
+  margin-bottom: 10px !important;
+  margin-left: -12px !important;
+}
+body main > .wrapper .article-wrapper article .time-wrapper .wp_social_bookmarking_light_clear {
+  display: none;
+}
+body main > .wrapper .article-wrapper article .blog-img-wrapper {
+  width: 100%;
+  aspect-ratio: 59/37;
+}
+body main > .wrapper .article-wrapper .blog {
+  width: 100%;
+}
+body main > .wrapper .article-wrapper .blog .ttl {
+  font-size: 26px;
+  margin-bottom: 33px;
+}
+body main > .wrapper .article-wrapper .blog .blog-content .blue-category {
+  padding: 8px 13px;
+}
+body main > .wrapper .article-wrapper .blog .blog-content + .blog-content {
+  margin-top: 28px;
+}
+body main > .wrapper .article-wrapper .blog .blog-content .blog-img-wrapper {
+  width: 210px;
+  aspect-ratio: 210/128;
+}
+body main > .wrapper .article-wrapper .blog .blog-content .blog-detail {
+  margin-left: 32px;
+}
+body main > .wrapper .article-wrapper .blog .blog-content .blog-detail p {
+  margin-bottom: 29px;
+  font-size: 16px;
+}
+body main > .wrapper .article-wrapper .blog .blog-content .blog-detail .blog-ttl {
+  font-size: 18px;
+}
+body main > .wrapper .sidebar {
+  width: 29.8889%;
+}
+body main > .wrapper .sidebar .blue-category {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 63px;
+  line-height: 63px;
+  font-size: 21px;
+}
+body main > .wrapper .sidebar .related-blog .related-article-content + .related-article-content {
+  margin-top: 40px;
+}
+body main > .wrapper .sidebar .related-blog .related-article-content:nth-of-type(3) {
+  margin-bottom: 50px;
+}
+body main > .wrapper .sidebar .related-blog .related-article-content a {
+  display: flex;
+}
+body main > .wrapper .sidebar .related-blog .related-article-content a .blog-img-wrapper {
+  width: 100px;
+  aspect-ratio: 10/7;
+}
+body main > .wrapper .sidebar .related-blog .related-article-content a .blog-ttl {
+  line-height: 2;
+  margin-left: 17px;
+  font-size: 12px;
+  color: #1B224C;
+  text-decoration: underline;
+  -webkit-line-clamp: 3;
+}
+body main > .wrapper .sidebar .category ul {
+  padding-left: 20px;
+}
+body main > .wrapper .sidebar .category ul li {
+  list-style: square;
+}
+body main > .wrapper .sidebar .category ul li a {
+  color: #1B224C;
+  font-size: 16px;
+}
+body main > .wrapper .sidebar .category ul li + li {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 790px) {
+  body main .wrapper .article-wrapper .blog .blog-content .blog-img-wrapper {
+    width: 150px;
+  }
+  body main .wrapper .article-wrapper .blog .blog-content .blog-detail {
+    margin-left: 25px;
+  }
+  body main .wrapper .article-wrapper .blog .blog-content .blog-detail .blog-ttl {
+    font-size: 16px;
+  }
+  body main .wrapper .sidebar .related-blog .related-article-content + .related-article-content {
+    margin-top: 35px;
+  }
+  body main .wrapper .sidebar .related-blog .related-article-content a .blog-img-wrapper {
+    width: 85px;
+  }
+  body main .wrapper .sidebar .related-blog .related-article-content a .blog-ttl {
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 520px) {
+  body main .wrapper {
+    flex-direction: column;
+  }
+  body main .wrapper .article-wrapper, body main .wrapper .sidebar {
+    width: 100%;
+  }
+  body main .wrapper .article-wrapper .blog {
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
+  body main .wrapper .article-wrapper .blog .ttl {
+    margin-bottom: 50px;
+  }
+  body main .wrapper .article-wrapper .blog .blog-content + .blog-content {
+    margin-top: 40px;
+  }
+  body main .wrapper .sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+  body main .wrapper .sidebar .blue-category {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+  body main .wrapper .sidebar .related-blog {
+    width: 65%;
+  }
+  body main .wrapper .sidebar .category {
+    width: 30%;
+  }
+  body main .wrapper .sidebar .category .blue-category {
+    width: 100%;
+  }
+  body main .wrapper .sidebar .category ul li a {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=blog-detail.css.map */
